@@ -6,7 +6,7 @@ import {
   StyleSheet,
   ViewStyle,
   Animated,
-  Easing,
+  Easing
 } from "react-native";
 
 const styles = StyleSheet.create({
@@ -18,24 +18,24 @@ const styles = StyleSheet.create({
         shadowRadius: 12,
         shadowOffset: {
           width: 0,
-          height: 6,
-        },
+          height: 6
+        }
       } as ViewStyle,
       android: {
-        elevation: 4,
-      } as ViewStyle,
-    }),
-  } as ViewStyle,
+        elevation: 4
+      } as ViewStyle
+    })
+  } as ViewStyle
 });
 
-interface Props {
+export interface TouchableProps {
   onPress?: () => void;
   style?: ViewStyle;
 }
 
-export default class Touchable extends React.Component<Props> {
+export default class Touchable extends React.Component<TouchableProps> {
   state = {
-    anim: new Animated.Value(1),
+    anim: new Animated.Value(1)
   };
 
   handlePressIn = () => {
@@ -43,7 +43,7 @@ export default class Touchable extends React.Component<Props> {
       toValue: 0.96,
       duration: 150,
       easing: Easing.out(Easing.quad),
-      useNativeDriver: true,
+      useNativeDriver: true
     }).start();
   };
 
@@ -52,7 +52,7 @@ export default class Touchable extends React.Component<Props> {
       toValue: 1,
       duration: 300,
       easing: Easing.out(Easing.quad),
-      useNativeDriver: true,
+      useNativeDriver: true
     }).start();
   };
 
@@ -67,7 +67,7 @@ export default class Touchable extends React.Component<Props> {
           style={[
             styles.root,
             this.props.style,
-            { transform: [{ scale: this.state.anim }] },
+            { transform: [{ scale: this.state.anim }] }
           ]}
         >
           {this.props.children}

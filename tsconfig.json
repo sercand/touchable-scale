@@ -1,0 +1,13 @@
+{
+  "files": ["index.tsx"],
+  "exclude": ["./dist"],
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "allowJs": false,
+    "jsx": "react-native",
+    "lib": ["dom", "es2015"],
+    "outDir": "./dist"
+  }
+}
