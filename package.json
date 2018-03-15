@@ -1,11 +1,18 @@
 {
   "name": "touchable-scale",
-  "version": "1.0.0",
-  "main": "index.tsx",
+  "version": "1.0.0-alpha-1",
   "license": "MIT",
+  "scripts": {
+    "prepublish": "tsc -d"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "react": "^16.2.0",
     "react-native": "^0.54.2",
     "typescript": "^2.7.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.40"
   }
 }
